@@ -1,0 +1,53 @@
+body, html {
+  height: 100%;
+}
+
+.navbar {
+  background-color: #add4f5;
+  height: 65px;
+}
+
+.navbar a {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  color: black;
+  padding-left: 2em;
+  text-decoration: none;
+}
+
+.navbar a.nav-link {
+  margin: 1.5em;
+}
+
+#hero {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/hero.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg");
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+#hero-text {
+  color: white;
+  padding-bottom: .5em;
+}
+
+.htext {
+  padding-top: 6em;
+}
+
+#introcontainer {
+  padding-top: 3em;
+  margin: 5em, 0em, 0em, 5em;
+}
+
+#introcontent {
+  text-align: left;
+}
+
+#section1header {
+  padding-top: 7em;
+}
+/*# sourceMappingURL=main.css.map */
