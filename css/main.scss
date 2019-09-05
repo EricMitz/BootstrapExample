@@ -1,13 +1,22 @@
 $color: rgb(173, 212, 245);
 $titlecolor: black;
+$mobile: 375px;
+$color2: darkgray;
+
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content
+    }
+}
 
 body, html {
     height: 100%;
 }
 
-.navbar {
-    background-color: $color;       
-    height: 65px;
+
+
+.navbar {     
 
     a {
         font-family: 'Roboto Condensed', sans-serif;
@@ -23,29 +32,123 @@ body, html {
 
 #hero {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/hero.jpg");
-    height:300px;
+    height:600px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+
+    .htext {
+        padding-top: 6em;
+        
+        @include mobile {
+            padding-top: 2em;
+        }
+        p.display-4 {
+            padding-top:2em;
+            color:white;
+            
+        
+        }
+        #hero-text {
+            padding-bottom: 2.5em;
+            color:white;
+        }
+    }
 }
 
-#hero-text {
-    color:white;
-    padding-bottom: .5em;
+#section1 {
+    margin-bottom: 7em;
+
+    #section1header {
+        padding-top: 7em;
+        text-align: center;
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    #introcontent {
+        text-align: left;
+        font-size: 15pt;
+    }
+    #introcontainer {
+        padding-top: 3em;
+        margin: 5em, 0em, 0em, 5em;
+    }
 }
 
-.htext {
-    padding-top: 6em;
-}
-#introcontainer {
-    padding-top: 3em;
-    margin: 5em, 0em, 0em, 5em;
-}
-#introcontent {
-    text-align: left;
+#section2 {
+    background-color: $color2;
+
+    img {
+        margin-top: 60px;
+        border-radius: 50%;
+        height:150px;
+        width:150px;
+    }
+    .testimonial {
+        text-align: center;
+        p {
+            padding-top: 30px;
+        }
+    }
+
 }
 
-#section1header {
-    padding-top: 7em;
+#section3 {
+    padding-bottom: 6em;
+    #section1header {
+        padding-top: 7em;
+    }
+
+    #messagebox {
+        padding-top:20px;
+
+        textarea {
+            height:200px;
+        }
+    }
+
+    input.messageinfo {
+        margin-bottom:10px;
+    }
+}
+
+#projectsection {
+    #section1header {
+        padding-top: 7em;
+        text-align: center;
+    }
+    img.projectthumb {
+        transition: transform .2s;
+        width: 200px;
+        height: 200px;
+        vertical-align: center;
+        display: flex;
+        
+    }
+    img.projectthumb:hover {
+        transform: scale(1.2);
+    }
+
+    .projectrow {
+        padding-bottom: 30px;
+    }
+
+}
+
+.footer {
+    background-color: $color2;
+    height:400px;
+
+    .footer-l {
+        text-align: left;
+        padding-top: 100px;
+    }
+
+    .footer-r {
+        text-align: right;
+        padding-top: 100px;
+    }
 }
